@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Login e senha erro limitado</title>
+</head>
+<body>
+    <h1>Limite de erros para senha</h1>
+    <div id="msg"></div>
+
+    <script>
+        let senha = "saopaulofc";
+
+        let tentativas = 0;
+
+        while (tentativas<3) {
+            let senhaUsuario = prompt("Digite a senha");
+            let msg = "";
+            if (senhaUsuario === senha){
+                tentativas = 4;
+                msg = "Seja Bem Vindo";
+            }else{
+                tentativas++;
+                msg = "Error404";
+            }
+            document.getElementById("msg").innerHTML= msg;
+
+        }
+    </script>
+
+</body>
+</html>

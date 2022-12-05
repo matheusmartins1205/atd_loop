@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprovados e Reprovados</title>
+ 
+</head>
+
+<body>
+    <h1>Peças Aprovadas e Reprovadas</h1>
+    <div id="resultado"></div>
+    <div id="total"></div>
+    <div id="total2"></div>
+    <script>
+         let resul = "";
+        let resul1 = "";
+        let resul2="";
+        let resul3="";
+        let reprovadas=1;
+        let aprovadas=1;
+        let numpeca ;
+        let testeQ = 3;
+        let contador = 0;
+       
+
+        for (let contador = 0; contador < 5 ; contador++) {
+            numpeca = prompt("Digite a numeração do produto");
+            testeQ = prompt("Digite a Qualidade do produto");
+            if (testeQ == 1){ 
+
+                resul += "Numero da peça :" + numpeca + " Peça Aprovada" + "</br>" ;
+                resul3 = "Total de peças Aprovadas: " + aprovadas ;
+                aprovadas++;
+
+            }  
+            
+             if (testeQ == 2) { 
+
+                resul2 += "Numero da peça :" + numpeca + " Peça Reprovada"+ 
+                "</br>" ;
+                resul4 = "Total de peças Reprovadas: "+ reprovadas;
+
+                reprovadas++
+
+  
+            } 
+          }
+
+        
+        console.log(resul3)
+
+
+        document.getElementById("resultado").innerHTML += resul+resul2  ;
+        document.getElementById("total").innerHTML +=resul1   +  resul3  + resul4;
+     
+
+
+
+        
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

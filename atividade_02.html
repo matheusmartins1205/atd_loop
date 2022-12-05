@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Cadastro dos Candidatos</p>
+    <p id="numC"></p>
+    <p id="resultado"></p>
+    <p></p>
+    <script>
+        let numC = 0;
+        let idade = 0;
+        let sexo = "";
+        let exp = "";
+        let contador = 0;
+        let idademenor = 0;
+        let idademenorqtd = 0;
+        let menormaior = 0;
+        let idademaior = 0;
+        let idademaiorqtd = 0;
+        let femqtd = 0;
+        let masqtd = 0;
+        let se = "";
+        let calc = 1;
+
+        
+
+        while (contador<=1) {
+            numC = prompt("Digite o numero do candidato");
+            idade = Number(prompt("Digite a idade do candidato"));
+            sexo = prompt("Digite o sexo do candidato, 1 para Masculino, 2 para Feminino");
+            exp = prompt("O canditado tem experiencia? ");
+           
+            if (idade < 18) {
+                menormaior = "não"
+                idademenor += idade;
+                idademenorqtd++;
+
+            } else {
+        
+                menormaior = "sim"
+                idademaior += idade;
+                idademaiorqtd++;
+            }
+
+            if (sexo == "1") {
+                masqtd++;
+                se = "Masculino";
+
+            } else if (sexo == "2") {
+                femqtd++;
+                se = "Feminino";
+
+                
+            }
+            contador++
+            calc= (idademenor + idademaior)/2
+
+        document.getElementById("numC").innerHTML += '</br>'+"Matricula dos Candidatos: " + numC + "</br>"+ "Idade : " + idade +"</br>"+"Sexo: "+ se +"</br>"+"Experiência: "+ exp +"</br>"+ "Maior de idade? " + menormaior +"</br>" 
+        document.getElementById("resultado").innerHTML = "Total de Candidatos: " + contador + "<br>" + "Média de Idade: " + calc;
+    
+        }
+
+
+
+
+
+    
+
+
+
+
+
+    </script>
+</body>
+
+</html>
